@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berry Dial</title>
+    <!-- Rubik Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwindcss CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        "2xs": "320px",
+                        "base": "500px",
+                        "sm": "620px"
+                    },
+                    colors: {
+                        customBlue: '#1e40af',
+                        customGray: '#2d3748'
+                    },
+                    fontFamily: {
+                        customFont: ['Rubik', 'sans-serif']
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="overflow-x-hidden font-customFont">
+
+    <header class="flex justify-between 2xs:m-4 md:m-6">
+        <div>
+            <img src="Image/Logo.png" class="2xs:w-[150px] 2xs:h-[40px] md:w-[200px] md:h-[50px]" alt="Berry Dial Logo">
+        </div>
+
+        <div>
+            <button class="2xs:w-[90px] 2xs:h-[40px] md:w-[130px] md:h-[50px] rounded-[10px]
+            2xs:text-sm md:text-lg bg-black text-white border-2 border-white 
+            hover:bg-white hover:text-black hover:border-black font-normal text-center">
+                Reach Us
+            </button>
+        </div>
+    </header>
+
+    <div class="flex justify-between gap-4 flex-col-reverse md:flex-row items-center md:gap-0 md:mx-10 lg:mx-16">
+        
+        <div class="2xs:w-full md:w-1/2 2xs:px-6 2xs:mb-4 md:my-24 flex flex-col items-center md:items-start gap-4 md:gap-6">
+            <p class="text-center md:text-start font-bold 2xs:text-[30px] md:text-[48px] lg:text-[52px]">
+                Appointments <br> Simplified With AI
+            </p>
+            <p class="text-center md:text-start 2xs:text-base lg:text-lg font-normal text-[#505056]">
+                Appointment | Conversation | <br> All completely done with just a few clicks.
+            </p>
+
+            <div class="flex justify-center md:justify-start">
+                <button class="2xs:w-[90px] 2xs:h-[40px] md:w-[130px] md:h-[50px] rounded-[10px]
+                2xs:text-sm md:text-lg bg-black text-white border-2 border-white 
+                hover:bg-white hover:text-black hover:border-black font-normal text-center">
+                    Reach Us
+                </button>
+            </div>
+        </div>
+
+        <div class=" md:w-1/2 flex justify-center">
+            <img src="Image/Appointment-Demo.png" class="w-full max-w-[462px] h-auto object-cover" alt="Mobile Image">
+        </div>
+        
+    </div>
+</body>
+</html>

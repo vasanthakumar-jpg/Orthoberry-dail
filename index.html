@@ -14,14 +14,15 @@
                 extend: {
                     screens: {
                         '2xs': '320px',
-                        'xs': '480px',
+                        'xs': '380px',
+                        'base':'540px',
                         'sm': '640px',
                         'md': '768px',
                         'lg': '1024px',
                         'xl': '1280px',
-                        '2xl': '1400px',
-                        '3xl': '1600px',
-                        '4xl': '1800px',
+                        // '2xl': '1400px',
+                        // '3xl': '1600px',
+                        // '4xl': '1800px',
                     },
                     fontFamily: {
                         customFont: ['Rubik', 'sans-serif']
@@ -33,64 +34,82 @@
 </head>
 
 <body class="overflow-x-hidden font-customFont bg-white text-gray-900">
+    <!-- Fixed Width Wrapper -->
+    <div class="max-w-screen-lg mx-auto">
+        <!-- Header Section -->
+        <header class="flex justify-between items-center px-4 md:px-8 py-4">
+            
+            <!-- Logo -->
+            <div>
+                <img src="Image/OrthoBerry-removebg.png" class="w-[150px] md:w-[200px] xl:w-[300px] h-auto object-contain " alt="Berry Dial Logo">
+            </div>
 
-    <!-- Header Section -->
-    <header class="flex justify-between items-center px-4 md:px-8 py-4">
-        <!-- Logo -->
-        <div>
-            <img src="Image/Logo.png" class="w-[150px] md:w-[200px] xl:w-[350px] h-auto object-contain" alt="Berry Dial Logo">
-        </div>
-
-
-        <!-- Reach Us Button -->
-        <div>
-            <button class="px-3 py-2 md:px-4 md:py-3 bg-black text-white font-semibold rounded-md shadow-md 
-            hover:bg-white hover:text-black hover:border-black focus:outline-none focus:ring-2 focus:ring-black 
-            focus:ring-opacity-100 transition-all duration-300 ease-in-out">
-                Reach Us
-              </button>
-        </div>
-    </header>
-
-    <!-- Main Content Section -->
-    <main class="flex flex-col-reverse md:flex-row justify-between items-center gap-8 px-6 md:px-16 py-8">
-        
-        <!-- Text Section -->
-        <div class="text-center md:text-left w-full md:w-1/2 space-y-6">
-            <h1 class="text-3xl sm:text-4xl md:text-4xl xl:text-6xl font-bold leading-tight">
-                Appointments <br> Simplified With AI
-            </h1>
-            <p class="text-lg sm:text-xl md:text-xl xl:text-3xl text-[#505056] leading-relaxed">
-                Appointment | Conversation | <br> All completely done with just a few clicks.
-            </p>
-
-            <div class="text-center md:text-left">
-                
+            <!-- Reach Us Button -->
+            <div>
                 <button class="px-3 py-2 md:px-4 md:py-3 bg-black text-white font-semibold rounded-md shadow-md 
                 hover:bg-white hover:text-black hover:border-black focus:outline-none focus:ring-2 focus:ring-black 
                 focus:ring-opacity-100 transition-all duration-300 ease-in-out">
                     Reach Us
-                  </button>
-
+                </button>
             </div>
-        </div>
+        </header>
 
-        <!-- Image Section -->
-        <div class="w-full md:w-1/2 relative flex justify-center">
-            <img src="Image/Mobile.png" class="w-full max-w-[462px] md:max-w-full h-auto object-cover" alt="Mobile Image">
-
-            <!-- Appointment Demo Text (positioned at the bottom of the image) -->
-            <div class="absolute bottom-10 lg:bottom-16 xl:bottom-20 left-1/2 transform -translate-x-1/2 
-            text-[10px] sm:text-xs md:text-xs lg:text-lg xl:text-xl text-black font-bold w-[80%] text-center">
-                <p class="mr-2">Appointment Demo</p>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Conversation Widget (Optional) -->
-    <elevenlabs-convai agent-id="QZHGBDAk99RDYQI1PUcB"></elevenlabs-convai>
-    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+           
+    <div class="relative flex">
     
+
+    <!-- Main Content Section -->
+    
+</div > 
+
+    <elevenlabs-convai agent-id="QZHGBDAk99RDYQI1PUcB" class="absolute 
+    right-[15%] 
+    xs:right-[20%] 
+    base:right-[30%]
+    md:right-[35%] 
+    lg:right-[40%]
+    xl:right-[42%]
+    2xl:right-[43%]
+    3xl:right-[45%]
+    top-44  
+    "></elevenlabs-convai>
+    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+     <!-- <elevenlabs-convai 
+    agent-id="QZHGBDAk99RDYQI1PUcB" 
+    class="bg-gray-100 rounded-lg shadow-lg p-4"
+></elevenlabs-convai> -->
+
+
+<main class="flex justify-center items-center w-full mt-[20%]">
+    <!-- Central Content Section -->
+    <div class="text-center flex flex-col justify-center items-center w-full space-y-6 mt-10">
+        <!-- Heading -->
+        <h1 class="text-3xl sm:text-4xl md:text-4xl xl:text-5xl font-bold leading-[40px]">
+            Appointments <br> Simplified With AI
+        </h1>
+
+        <!-- Paragraph -->
+        <p class="text-lg sm:text-xl md:text-xl xl:text-2xl text-[#505056] mx-4 leading-relaxed">
+            Appointment | Conversation | All completely done with just a few clicks.
+        </p>
+
+        <!-- Widget Below -->
+        <!-- <div class="absolute top-[60%] flex justify-center items-center">
+            <elevenlabs-convai agent-id="QZHGBDAk99RDYQI1PUcB"></elevenlabs-convai>
+        </div> -->
+
+    </div>
+</main>
+
+    
+
+</div>
+
+    </div>
+
+    <!-- Widget Section -->
+   
+   
 </body>
 </html>
+                

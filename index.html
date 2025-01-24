@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berry Dial</title>
+    <title> Dial</title>
     <!-- Rubik Font -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Tailwindcss CDN -->
@@ -15,14 +15,12 @@
                     screens: {
                         '2xs': '320px',
                         'xs': '380px',
-                        'base':'540px',
+                        'base': '540px',
                         'sm': '640px',
                         'md': '768px',
                         'lg': '1024px',
                         'xl': '1280px',
-                        // '2xl': '1400px',
-                        // '3xl': '1600px',
-                        // '4xl': '1800px',
+                        '2xl': '1440px',
                     },
                     fontFamily: {
                         customFont: ['Rubik', 'sans-serif']
@@ -34,14 +32,15 @@
 </head>
 
 <body class="overflow-x-hidden font-customFont bg-white text-gray-900">
-    <!-- Fixed Width Wrapper -->
-    <div class="max-w-screen-lg mx-auto">
+    <!-- Fixed Width Wrapper with Zoom Effect -->
+    <div class="max-w-screen-xl mx-auto transform transition-transform duration-300 ease-in-out 
+        xl:scale-100 2xl:scale-110"> <!-- Zooms to 110% for screens above 1440px -->
+        
         <!-- Header Section -->
-        <header class="flex justify-between items-center px-4 md:px-8 py-4">
-            
+        <header class="flex justify-between items-center px-4 md:px-8 lg:py-10  ">
             <!-- Logo -->
             <div>
-                <img src="Image/OrthoBerry-removebg.png" class="w-[150px] md:w-[200px] xl:w-[300px] h-[80px] object-contain " alt="Berry Dial Logo">
+                <img src="Image/OrthoBerry-removebg.png" class="w-[150px] md:w-[200px] xl:w-[300px] h-[80px] object-contain" alt="Berry Dial Logo">
             </div>
 
             <!-- Reach Us Button -->
@@ -54,15 +53,40 @@
             </div>
         </header>
 
-           
-    <div class="relative flex">
-    
+        <!-- Eleven Labs Widget -->
+        <elevenlabs-convai agent-id="QZHGBDAk99RDYQI1PUcB" class="absolute 
+            right-[15%] 
+            xs:right-[20%] 
+            base:right-[30%]
+            md:right-[35%] 
+            lg:right-[40%]
+            xl:right-[42%]
+            2xl:right-[43%]
+            top-[25%]  lg:top-64
+        "></elevenlabs-convai>
+        <script src="modify.js" async type="text/javascript"></script>
 
-    <!-- Main Content Section -->
-    
-</div > 
+        <!-- Main Content Section -->
+        <main class="flex justify-center items-center w-full mt-[55%] xs:top-[10%] base:mt-[30%] sm:mt-[20%] md:mt-[35%] lg:mt-[20%]">
+            <!-- Central Content Section -->
+            <div class="text-center flex flex-col justify-center items-center w-full space-y-6 mt-10">
+                <!-- Heading -->
+                <h1 class="text-3xl sm:text-4xl md:text-4xl xl:text-5xl font-bold leading-[40px]">
+                    Appointments <br> Simplified With AI
+                </h1>
 
-    <elevenlabs-convai agent-id="QZHGBDAk99RDYQI1PUcB" class="absolute 
+                <!-- Paragraph -->
+                <p class="text-lg sm:text-xl md:text-xl xl:text-2xl text-[#505056] mx-4 pb-44 leading-relaxed">
+                    Appointment | Conversation | All completely done with just a few clicks.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+<!-- 
+<elevenlabs-convai agent-id="QZHGBDAk99RDYQI1PUcB" class="absolute 
     right-[15%] 
     xs:right-[20%] 
     base:right-[30%]
@@ -71,45 +95,6 @@
     xl:right-[42%]
     2xl:right-[43%]
     3xl:right-[45%]
-    top-[35%]  lg:top-64
+    top-[25%]  lg:top-64
     "></elevenlabs-convai>
-    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-     <!-- <elevenlabs-convai 
-    agent-id="QZHGBDAk99RDYQI1PUcB" 
-    class="bg-gray-100 rounded-lg shadow-lg p-4"
-></elevenlabs-convai> -->
-
-
-<main class="flex justify-center items-center w-full mt-[40%] md:mt-[20%] lg:mt-[30%]">
-    <!-- Central Content Section -->
-    <div class="text-center flex flex-col justify-center items-center w-full space-y-6 mt-10">
-        <!-- Heading -->
-        <h1 class="text-3xl sm:text-4xl md:text-4xl xl:text-5xl font-bold leading-[40px]">
-            Appointments <br> Simplified With AI
-        </h1>
-
-        <!-- Paragraph -->
-        <p class="text-lg sm:text-xl md:text-xl xl:text-2xl text-[#505056] mx-4 mb-10 leading-relaxed">
-            Appointment | Conversation | All completely done with just a few clicks.
-        </p>
-
-        <!-- Widget Below -->
-        <!-- <div class="absolute top-[60%] flex justify-center items-center">
-            <elevenlabs-convai agent-id="QZHGBDAk99RDYQI1PUcB"></elevenlabs-convai>
-        </div> -->
-
-    </div>
-</main>
-
-    
-
-</div>
-
-    </div>
-
-    <!-- Widget Section -->
-   
-   
-</body>
-</html>
-                
+    <script src="modify.js" async type="text/javascript"></script> -->

@@ -1,0 +1,23 @@
+{
+  "name": "orthoberry-dail",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasanthakumar-jpg/Orthoberry-dail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vasanthakumar-jpg/Orthoberry-dail/issues"
+  },
+  "homepage": "https://github.com/vasanthakumar-jpg/Orthoberry-dail#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

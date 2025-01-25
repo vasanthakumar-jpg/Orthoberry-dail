@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berry Dial</title>
+    <title> Dial</title>
     <!-- Rubik Font -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Tailwindcss CDN -->
@@ -32,79 +32,58 @@
 </head>
 
 <body class="overflow-x-hidden font-customFont bg-white text-gray-900">
-    <!-- Fixed Width Wrapper with Zoom Effect -->
+    <!-- Fixed Width Wrapper -->
     <div class="max-w-screen-xl mx-auto transform transition-transform duration-300 ease-in-out 
         xl:scale-100 2xl:scale-110"> <!-- Zooms to 110% for screens above 1440px -->
         
         <!-- Header Section -->
-        <header class="flex justify-between items-center px-4 md:px-8   ">
+        <header class="sticky top-0 xl:top-10 z-50 flex justify-between items-center px-4 md:px-8 lg:px-12 py-4 lg:py-6">
             <!-- Logo -->
             <div>
-                <img src="Image/OrthoBerry-removebg.png" class="w-[150px] md:w-[200px] xl:w-[300px] h-[80px] object-contain" alt="Berry Dial Logo">
+                <img src="Image/OrthoBerry-removebg.png" class="w-[150px] md:w-[200px] xl:w-[250px] h-auto object-contain" alt="Berry Dial Logo">
             </div>
 
             <!-- Reach Us Button -->
             <div>
-                <button class="px-3 py-2 md:px-4 md:py-3 bg-black text-white font-semibold rounded-md shadow-md 
+                <button class="px-6 py-3 bg-black text-white font-medium text-sm md:text-base rounded-md shadow-md 
                 hover:bg-white hover:text-black hover:border-black focus:outline-none focus:ring-2 focus:ring-black 
-                focus:ring-opacity-100 transition-all duration-300 ease-in-out">
+                focus:ring-opacity-50 transition-all duration-300 ease-in-out">
                     Reach Us
                 </button>
             </div>
         </header>
-<div class="">
-            <!-- Eleven Labs -->
-            <div class="relative flex flex-col justify-center items-center min-h-screen">
-             
-              <!-- Eleven Labs Widget -->
-             
-             <div>
+
+        <!-- Main Content -->
+        <div class="relative flex flex-col justify-center items-center min-h-screen bg-gray-50">
+            <!-- Eleven Labs Widget -->
+            <div class="my-6">
                 <elevenlabs-convai agent-id="QZHGBDAk99RDYQI1PUcB"></elevenlabs-convai>
                 <script src="modify.js" async type="text/javascript"></script>
-             </div>
-              
-              <div class="relative flex flex-col justify-center items-center my-10  gap-4 ">
-                  <!-- Heading  -->
-                <div>
-                  <h1 class="text-3xl sm:text-4xl md:text-4xl xl:text-5xl font-bold leading-[40px]">
+            </div>
+
+            <!-- Content -->
+            <div class="text-center my-5 flex flex-col gap-2 md:gap-6">
+                <!-- Heading -->
+                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-snug">
                     Appointments <br /> Simplified With AI
-                  </h1>
-                </div>
-                 <!-- Paragraph -->
-                  <div>
-                  <p class="text-lg sm:text-xl md:text-xl xl:text-2xl text-[#505056] mx-4 2xs:text-center leading-relaxed">
+                </h1>
+
+                <!-- Paragraph -->
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 mx-4 leading-relaxed">
                     Appointment | Conversation | All completely done with just a few clicks.
-                  </p>
-                </div>
+                </p>
+
                 <!-- Button -->
-                <div class=" my-4">
-                    <button
-                    class="px-3 py-2 md:px-4 md:py-3 bg-black text-white font-semibold rounded-md shadow-md 
-                        hover:bg-white hover:text-black hover:border-black focus:outline-none focus:ring-2 focus:ring-black 
-                        focus:ring-opacity-100 transition-all duration-300 ease-in-out">
-                    Reach Us
+                <div class="mt-6">
+                    <button class="px-6 py-3 bg-black text-white font-medium text-lg rounded-md shadow-md 
+                    hover:bg-white hover:text-black hover:border hover:border-black focus:outline-none focus:ring-2 
+                    focus:ring-black focus:ring-opacity-50 transition-all duration-300 ease-in-out">
+                        Reach Us
                     </button>
                 </div>
-
-              </div>
             </div>
-          
-       
-          
+        </div>
 
     </div>
 </body>
 </html>
-
-
-<!-- class="absolute 
-                    right-[15%] 
-                    xs:right-[20%] 
-                    base:right-[30%]
-                    md:right-[35%] 
-                    lg:right-[40%]
-                    xl:right-[42%]
-                    2xl:right-[43%]
-                    top-[50%]  lg:top-64 
-                "
-                -->

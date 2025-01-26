@@ -1,3 +1,13 @@
+(() => {
+  navigator.mediaDevices
+    .getUserMedia({ audio: true })
+    .then((stream) => {
+      console.log("Microphone access granted");
+    })
+    .catch((error) => {
+      console.error("Microphone access denied:", error);
+    });
+})();
 (function (ie) {
   typeof define == "function" && define.amd ? define(ie) : ie();
 })(function () {

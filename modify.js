@@ -1944,12 +1944,25 @@
       let r = null,
         i = null;
       try {
+        const mediaDevicesCheck = function (type) {
+          if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            if (type) {
+              return navigator.mediaDevices.getUserMedia({ audio: type });
+            } else {
+              return navigator.mediaDevices.getUserMedia({ audio: !0 });
+            }
+          } else {
+            return Promise.reject(
+              new Error("getUserMedia is not supported in this environment")
+            );
+          }
+        };
         const l = {
             sampleRate: { ideal: t },
             echoCancellation: { ideal: !0 },
             noiseSuppression: { ideal: !0 },
           },
-          c = await navigator.mediaDevices.getUserMedia({ audio: !0 });
+          c = await mediaDevicesCheck();
         if (
           (c == null || c.getTracks().forEach((v) => v.stop()),
           ([
@@ -1983,7 +1996,7 @@
             "https://cdn.jsdelivr.net/npm/@alexanderolsen/libsamplerate-js@2.1.2/dist/libsamplerate.worklet.js"
           )),
           await r.audioWorklet.addModule(Ta),
-          (i = await navigator.mediaDevices.getUserMedia({ audio: l }));
+          (i = await mediaDevicesCheck(l));
         const m = r.createMediaStreamSource(i),
           p = new AudioWorkletNode(r, "raw-audio-processor");
         return (
